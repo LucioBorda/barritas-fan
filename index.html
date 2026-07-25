@@ -3,76 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barritas FAN! - Energía Real</title>
-  <!-- Tailwind CSS por CDN para no configurar build tools -->
+  <title>Barritas FAN! - Energía Real con Adaptógenos</title>
+  
+  <!-- Tipografía Nunito (Google Fonts) para simular el estilo de Intro Rust y Nunito Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS por CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Paleta de colores exacta de la marca FAN!
+            fan: {
+              dark: '#255426',    // Verde oscuro (#255426)
+              cream: '#fef9dd',   // Crema suave (#fef9dd)
+              green: '#96c587',   // Verde claro (#96c587)
+              pink: '#f1d4d3',    // Rosa pálido (#f1d4d3)
+              red: '#d16055',     // Rojo terracota (#d16055)
+              orange: '#ffe2cf',  // Naranja suave (#ffe2cf)
+              yellow: '#ead375'   // Amarillo ocre (#ead375)
+            }
+          },
+          fontFamily: {
+            display: ['Nunito', 'sans-serif'], 
+            sans: ['Nunito Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { -webkit-font-smoothing: antialiased; }
+    
+    /* Efecto de flotado sutil para destacar el producto */
+    .floating-item {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
 </head>
-<body class="bg-amber-50 font-sans text-gray-800">
+<body class="bg-fan-cream font-sans text-fan-dark">
 
   <!-- Header / Navbar -->
-  <header class="max-w-6xl mx-auto p-6 flex justify-between items-center">
-    <h1 class="text-3xl font-black text-amber-600 tracking-wider">FAN!</h1>
-    <nav class="space-x-6 text-sm font-semibold text-gray-700">
-      <a href="#beneficios" class="hover:text-amber-600">Beneficios</a>
-      <a href="#sabores" class="hover:text-amber-600">Sabores</a>
-      <a href="#contacto" class="hover:text-amber-600">Contacto</a>
-    </nav>
+  <header class="bg-white border-b border-fan-orange/50 shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+      <h1 class="text-4xl font-display font-black text-fan-dark tracking-tighter">FAN!</h1>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="#filosofia" class="text-fan-dark hover:text-fan-red transition">Filosofía</a>
+        <a href="#variedades" class="text-fan-dark hover:text-fan-red transition">Variedades</a>
+        <a href="#contacto" class="text-fan-dark hover:text-fan-red transition">Contacto</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <section id="filosofia" class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
     <div>
-      <span class="inline-block bg-amber-200 text-amber-800 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wide mb-4">
-        Snack Nutritivo
+      <span class="inline-block bg-fan-green/30 text-fan-dark text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-5">
+        Energía Natural & 100% Vegetal
       </span>
-      <h2 class="text-5xl font-extrabold leading-tight text-gray-900 mb-6">
-        Hacé que tu día explote de energía con <span class="text-amber-600">FAN!</span>
+      <h2 class="text-5xl md:text-6xl font-display font-black leading-tight text-fan-dark mb-6 tracking-tighter">
+        Tu dosis diaria de <span class="text-fan-red">foco y energía</span>.
       </h2>
-      <p class="text-lg text-gray-600 mb-8">
-        Sin azúcares agregados, cargadas de frutos secos y con el crunch justo para acompañarte a estudiar, entrenar o laburar.
+      <p class="text-lg text-fan-dark/80 mb-8 leading-relaxed">
+        Barritas funcionales con adaptógenos. Sin gluten, sin azúcares añadidos, solo ingredientes reales para potenciar tu día.
       </p>
-      <a href="#sabores" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1">
-        Probar sabores
+      <a href="#variedades" class="inline-block bg-fan-red hover:bg-fan-red/90 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 text-base">
+        Descubrir Variedades
       </a>
     </div>
     
-    <!-- Placeholder para la imagen principal de la barrita -->
-    <div class="bg-amber-200 border-2 border-dashed border-amber-400 rounded-3xl h-80 flex items-center justify-center text-amber-700 font-bold">
-      [ Muestra del Producto / Foto Barrita FAN! ]
+    <!-- Hero con imagen de la barrita Foco -->
+    <div class="relative flex justify-center items-center">
+      <div class="absolute inset-0 bg-fan-green rounded-full filter blur-3xl opacity-30 scale-110"></div>
+      <img src="foco.png" alt="Barrita FAN! Foco" class="floating-item w-full max-w-sm z-10 drop-shadow-xl" />
     </div>
   </section>
 
-  <!-- Sabores / Productos -->
-  <section id="sabores" class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">Nuestros Sabores Top</h3>
+  <!-- Sección de Variedades -->
+  <section id="variedades" class="bg-white py-20 border-y border-fan-orange/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-4xl md:text-5xl font-display font-black text-center mb-4 text-fan-dark tracking-tighter">Explorá tu FAN!</h3>
+      <p class="text-center text-base text-fan-dark/70 mb-16 max-w-2xl mx-auto">Cada barrita está formulada para un momento específico de tu día, combinando sabores únicos con adaptógenos potentes.</p>
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Sabor 1 -->
-        <div class="border border-gray-100 rounded-2xl p-6 bg-amber-50/50 shadow-sm text-center">
-          <div class="bg-amber-200 h-40 rounded-xl mb-4 flex items-center justify-center text-xs text-amber-800">
-            [ Foto Cacao & Avellanas ]
-          </div>
-          <h4 class="font-bold text-xl mb-2">Cacao Crunch</h4>
-          <p class="text-gray-600 text-sm">Cacao 70%, avellanas tostadas y miel natural.</p>
+        <!-- Variedad 1: FOCO -->
+        <div class="bg-fan-pink/30 border border-fan-pink rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <img src="foco.png" alt="FAN! FOCO Cacao" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 0s;" />
+          <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">FOCO</h4>
+          <p class="text-fan-dark/90 font-semibold mb-2 text-base">Cacao & Nibs, Melena de León</p>
+          <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Para momentos que requieren concentración máxima y claridad mental.</p>
+          <span class="bg-fan-dark text-white text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider">Concentración</span>
         </div>
 
-        <!-- Sabor 2 -->
-        <div class="border border-gray-100 rounded-2xl p-6 bg-amber-50/50 shadow-sm text-center">
-          <div class="bg-amber-200 h-40 rounded-xl mb-4 flex items-center justify-center text-xs text-amber-800">
-            [ Foto Maní & Sal Marina ]
-          </div>
-          <h4 class="font-bold text-xl mb-2">Peanut Power</h4>
-          <p class="text-gray-600 text-sm">Pasta de maní casera, chía y toque de sal marina.</p>
+        <!-- Variedad 2: MENTE -->
+        <div class="bg-fan-orange/40 border border-fan-orange rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <img src="mente.png" alt="FAN! MENTE Frutos Rojos" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 0.8s;" />
+          <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">MENTE</h4>
+          <p class="text-fan-dark/90 font-semibold mb-2 text-base">Frutos Rojos & Chía, Rhodiola Rosea</p>
+          <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Equilibrio y calma para tu mente en días exigentes.</p>
+          <span class="bg-fan-red text-white text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider">Equilibrio</span>
         </div>
 
-        <!-- Sabor 3 -->
-        <div class="border border-gray-100 rounded-2xl p-6 bg-amber-50/50 shadow-sm text-center">
-          <div class="bg-amber-200 h-40 rounded-xl mb-4 flex items-center justify-center text-xs text-amber-800">
-            [ Foto Frutos Rojos ]
-          </div>
-          <h4 class="font-bold text-xl mb-2">Berry Explosion</h4>
-          <p class="text-gray-600 text-sm">Arándanos deshidratados, almendras y avena.</p>
+        <!-- Variedad 3: ENERGÍA -->
+        <div class="bg-fan-yellow/30 border border-fan-yellow rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <img src="energia.png" alt="FAN! ENERGÍA Peanut Caramel" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 1.6s;" />
+          <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">ENERGÍA</h4>
+          <p class="text-fan-dark/90 font-semibold mb-2 text-base">Peanut Caramel, Ginseng Sibereano</p>
+          <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Un impulso de energía natural y sostenida para tu cuerpo.</p>
+          <span class="bg-fan-dark text-white text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider">Vitalidad</span>
         </div>
 
       </div>
@@ -80,8 +128,21 @@
   </section>
 
   <!-- Footer -->
-  <footer id="contacto" class="max-w-6xl mx-auto p-8 text-center text-gray-500 text-sm">
-    <p>© 2026 Barritas FAN! — Prototipo de Presentación.</p>
+  <footer id="contacto" class="bg-fan-dark text-fan-cream/80 py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+      <div>
+        <h5 class="text-3xl font-display font-black tracking-tight mb-2 text-fan-cream">¿Listo para ser FAN!?</h5>
+        <p class="text-base text-fan-cream/80">Seguinos en nuestras redes y formá parte de la comunidad que elige energía real.</p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-6 md:justify-end items-center">
+        <a href="#" class="text-fan-cream hover:text-white transition font-semibold">Instagram</a>
+        <a href="#" class="text-fan-cream hover:text-white transition font-semibold">TikTok</a>
+        <a href="mailto:hola@barritasfan.com" class="bg-fan-yellow hover:bg-fan-yellow/90 text-fan-dark px-6 py-3 rounded-full font-bold text-sm transition">hola@barritasfan.com</a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-fan-green/20 text-center text-xs text-fan-cream/50">
+      <p>© 2026 Barritas FAN! — Prototipo de Presentación.</p>
+    </div>
   </footer>
 
 </body>
