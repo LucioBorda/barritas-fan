@@ -17,15 +17,14 @@
       theme: {
         extend: {
           colors: {
-            // Paleta de colores exacta de la marca FAN!
             fan: {
-              dark: '#255426',    // Verde oscuro (#255426)
-              cream: '#fef9dd',   // Crema suave (#fef9dd)
-              green: '#96c587',   // Verde claro (#96c587)
-              pink: '#f1d4d3',    // Rosa pálido (#f1d4d3)
-              red: '#d16055',     // Rojo terracota (#d16055)
-              orange: '#ffe2cf',  // Naranja suave (#ffe2cf)
-              yellow: '#ead375'   // Amarillo ocre (#ead375)
+              dark: '#255426',    // Verde oscuro
+              cream: '#fef9dd',   // Crema suave
+              green: '#96c587',   // Verde claro
+              pink: '#f1d4d3',    // Rosa pálido
+              red: '#d16055',     // Rojo terracota
+              orange: '#ffe2cf',  // Naranja suave
+              yellow: '#ead375'   // Amarillo ocre
             }
           },
           fontFamily: {
@@ -39,7 +38,7 @@
   <style>
     body { -webkit-font-smoothing: antialiased; }
     
-    /* Efecto de flotado sutil para destacar el producto */
+    /* Efecto flotante para el PNG sin fondo */
     .floating-item {
       animation: float 6s ease-in-out infinite;
     }
@@ -81,10 +80,10 @@
       </a>
     </div>
     
-    <!-- Hero con imagen de la barrita Foco -->
+    <!-- Hero con imagen recortada sin fondo -->
     <div class="relative flex justify-center items-center">
       <div class="absolute inset-0 bg-fan-green rounded-full filter blur-3xl opacity-30 scale-110"></div>
-      <img src="foco.png" alt="Barrita FAN! Foco" class="floating-item w-full max-w-sm z-10 drop-shadow-xl" />
+      <img src="foco sin fondo.png" alt="Barrita FAN! Foco" class="floating-item w-full max-w-xs z-10 drop-shadow-2xl" />
     </div>
   </section>
 
@@ -97,8 +96,11 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Variedad 1: FOCO -->
-        <div class="bg-fan-pink/30 border border-fan-pink rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
-          <img src="foco.png" alt="FAN! FOCO Cacao" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 0s;" />
+        <div class="border border-fan-pink rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          <!-- Box contenedora con imagen de fondo "fondo barrita foco.png" -->
+          <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita foco.png');">
+            <img src="foco sin fondo.png" alt="FAN! FOCO Cacao" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 0s;" />
+          </div>
           <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">FOCO</h4>
           <p class="text-fan-dark/90 font-semibold mb-2 text-base">Cacao & Nibs, Melena de León</p>
           <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Para momentos que requieren concentración máxima y claridad mental.</p>
@@ -106,8 +108,11 @@
         </div>
 
         <!-- Variedad 2: MENTE -->
-        <div class="bg-fan-orange/40 border border-fan-orange rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
-          <img src="mente.png" alt="FAN! MENTE Frutos Rojos" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 0.8s;" />
+        <div class="border border-fan-orange rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          <!-- Box contenedora con imagen de fondo "fondo barrita metne.png" -->
+          <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita metne.png');">
+            <img src="mente sin fondo.png" alt="FAN! MENTE Frutos Rojos" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 0.8s;" />
+          </div>
           <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">MENTE</h4>
           <p class="text-fan-dark/90 font-semibold mb-2 text-base">Frutos Rojos & Chía, Rhodiola Rosea</p>
           <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Equilibrio y calma para tu mente en días exigentes.</p>
@@ -115,8 +120,11 @@
         </div>
 
         <!-- Variedad 3: ENERGÍA -->
-        <div class="bg-fan-yellow/30 border border-fan-yellow rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300">
-          <img src="energia.png" alt="FAN! ENERGÍA Peanut Caramel" class="w-full h-80 object-contain mb-6 floating-item" style="animation-delay: 1.6s;" />
+        <div class="border border-fan-yellow rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+          <!-- Box contenedora con imagen de fondo "fondo barrita energia.png" -->
+          <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita energia.png');">
+            <img src="energia sin fondo.png" alt="FAN! ENERGÍA Peanut Caramel" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 1.6s;" />
+          </div>
           <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">ENERGÍA</h4>
           <p class="text-fan-dark/90 font-semibold mb-2 text-base">Peanut Caramel, Ginseng Sibereano</p>
           <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Un impulso de energía natural y sostenida para tu cuerpo.</p>
