@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Barritas FAN! - Energía Real con Adaptógenos</title>
   
-  <!-- Tipografía Nunito (Google Fonts) para simular el estilo de Intro Rust y Nunito Sans -->
+  <!-- Tipografía Nunito (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS por CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -38,7 +38,7 @@
   <style>
     body { -webkit-font-smoothing: antialiased; }
     
-    /* Efecto flotante para el PNG sin fondo */
+    /* Efecto flotante para productos */
     .floating-item {
       animation: float 6s ease-in-out infinite;
     }
@@ -55,10 +55,14 @@
   <header class="bg-white border-b border-fan-orange/50 shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
       <h1 class="text-4xl font-display font-black text-fan-dark tracking-tighter">FAN!</h1>
-      <nav class="space-x-6 text-sm font-semibold">
+      <nav class="hidden md:flex space-x-6 text-sm font-semibold items-center">
         <a href="#filosofia" class="text-fan-dark hover:text-fan-red transition">Filosofía</a>
-        <a href="#variedades" class="text-fan-dark hover:text-fan-red transition">Variedades</a>
-        <a href="#contacto" class="text-fan-dark hover:text-fan-red transition">Contacto</a>
+        <a href="#variedades" class="text-fan-dark hover:text-fan-red transition">Barritas</a>
+        <a href="#proximamente" class="text-fan-dark hover:text-fan-red transition">Próximamente</a>
+        <a href="#beneficios" class="text-fan-dark hover:text-fan-red transition">Beneficios</a>
+        <a href="https://www.instagram.com/fan.barritas?igsh=bnpsbmk5eWdhcXBh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="bg-fan-dark text-white px-4 py-2 rounded-full hover:bg-fan-red transition font-bold text-xs">
+          @fan.barritas
+        </a>
       </nav>
     </div>
   </header>
@@ -75,9 +79,14 @@
       <p class="text-lg text-fan-dark/80 mb-8 leading-relaxed">
         Barritas funcionales con adaptógenos. Sin gluten, sin azúcares añadidos, solo ingredientes reales para potenciar tu día.
       </p>
-      <a href="#variedades" class="inline-block bg-fan-red hover:bg-fan-red/90 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 text-base">
-        Descubrir Variedades
-      </a>
+      <div class="flex flex-wrap gap-4 items-center">
+        <a href="#variedades" class="inline-block bg-fan-red hover:bg-fan-red/90 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 text-base">
+          Descubrir Barritas
+        </a>
+        <a href="https://www.instagram.com/fan.barritas?igsh=bnpsbmk5eWdhcXBh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-fan-dark text-fan-dark hover:bg-fan-dark hover:text-white font-bold px-6 py-3.5 rounded-full transition text-base">
+          Ver Instagram
+        </a>
+      </div>
     </div>
     
     <!-- Hero con imagen recortada sin fondo -->
@@ -87,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Sección de Variedades -->
+  <!-- Sección de Variedades de Barritas -->
   <section id="variedades" class="bg-white py-20 border-y border-fan-orange/50">
     <div class="max-w-7xl mx-auto px-6">
       <h3 class="text-4xl md:text-5xl font-display font-black text-center mb-4 text-fan-dark tracking-tighter">Explorá tu FAN!</h3>
@@ -97,7 +106,6 @@
         
         <!-- Variedad 1: FOCO -->
         <div class="border border-fan-pink rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-          <!-- Box contenedora con imagen de fondo "fondo barrita foco.png" -->
           <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita foco.png');">
             <img src="foco sin fondo.png" alt="FAN! FOCO Cacao" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 0s;" />
           </div>
@@ -109,7 +117,6 @@
 
         <!-- Variedad 2: MENTE -->
         <div class="border border-fan-orange rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-          <!-- Box contenedora con imagen de fondo "fondo barrita metne.png" -->
           <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita metne.png');">
             <img src="mente sin fondo.png" alt="FAN! MENTE Frutos Rojos" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 0.8s;" />
           </div>
@@ -121,13 +128,12 @@
 
         <!-- Variedad 3: ENERGÍA -->
         <div class="border border-fan-yellow rounded-3xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-          <!-- Box contenedora con imagen de fondo "fondo barrita energia.png" -->
           <div class="w-full h-80 rounded-2xl mb-6 bg-cover bg-center flex items-center justify-center p-4 relative" style="background-image: url('fondo barrita energia.png');">
             <img src="energia sin fondo.png" alt="FAN! ENERGÍA Peanut Caramel" class="h-64 object-contain floating-item drop-shadow-xl" style="animation-delay: 1.6s;" />
           </div>
           <h4 class="font-display font-black text-3xl mb-2 text-fan-dark tracking-tight">ENERGÍA</h4>
           <p class="text-fan-dark/90 font-semibold mb-2 text-base">Peanut Caramel, Ginseng Sibereano</p>
-          <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Un impulso de energía natural y sostenida para tu cuerpo.</p>
+          <p class="text-fan-dark/70 text-sm mb-6 flex-grow">Un impulso de energía natural y sustained para tu cuerpo.</p>
           <span class="bg-fan-dark text-white text-xs px-4 py-2 rounded-full font-bold uppercase tracking-wider">Vitalidad</span>
         </div>
 
@@ -135,21 +141,118 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="contacto" class="bg-fan-dark text-fan-cream/80 py-16 px-6">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
-      <div>
-        <h5 class="text-3xl font-display font-black tracking-tight mb-2 text-fan-cream">¿Listo para ser FAN!?</h5>
-        <p class="text-base text-fan-cream/80">Seguinos en nuestras redes y formá parte de la comunidad que elige energía real.</p>
+  <!-- Nueva Sección: Próximamente (Bocaditos FAN!) -->
+  <section id="proximamente" class="py-20 bg-fan-cream relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block bg-fan-red text-white text-xs px-4 py-1.5 rounded-full font-extrabold uppercase tracking-widest mb-3 shadow-sm">
+          Próximamente
+        </span>
+        <h3 class="text-4xl md:text-5xl font-display font-black text-fan-dark tracking-tighter">
+          Nuevos Bocaditos FAN!
+        </h3>
+        <p class="text-base text-fan-dark/70 mt-3 max-w-xl mx-auto">
+          La misma dosis de energía y funcionalidad en una versión snack idónea para picar en cualquier momento.
+        </p>
       </div>
-      <div class="flex flex-col md:flex-row gap-6 md:justify-end items-center">
-        <a href="#" class="text-fan-cream hover:text-white transition font-semibold">Instagram</a>
-        <a href="#" class="text-fan-cream hover:text-white transition font-semibold">TikTok</a>
-        <a href="mailto:hola@barritasfan.com" class="bg-fan-yellow hover:bg-fan-yellow/90 text-fan-dark px-6 py-3 rounded-full font-bold text-sm transition">hola@barritasfan.com</a>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Bocadito FOCO -->
+        <div class="bg-white/80 backdrop-blur border border-fan-pink rounded-3xl p-6 text-center shadow-sm relative group hover:border-fan-red transition">
+          <span class="absolute top-4 right-4 bg-fan-pink text-fan-dark text-[10px] font-black px-2.5 py-1 rounded-full uppercase">Próximo</span>
+          <div class="h-60 flex items-center justify-center mb-4">
+            <img src="foco bocadito sin fondo.png" alt="Bocadito FAN! Foco" class="max-h-52 object-contain floating-item drop-shadow-md" style="animation-delay: 0.2s;" />
+          </div>
+          <h4 class="font-display font-extrabold text-2xl text-fan-dark mb-1">Bocaditos FOCO</h4>
+          <p class="text-xs font-semibold text-fan-dark/60">Cacao & Melena de León</p>
+        </div>
+
+        <!-- Bocadito MENTE -->
+        <div class="bg-white/80 backdrop-blur border border-fan-orange rounded-3xl p-6 text-center shadow-sm relative group hover:border-fan-red transition">
+          <span class="absolute top-4 right-4 bg-fan-orange text-fan-dark text-[10px] font-black px-2.5 py-1 rounded-full uppercase">Próximo</span>
+          <div class="h-60 flex items-center justify-center mb-4">
+            <img src="mente bocadito sin fondo.png" alt="Bocadito FAN! Mente" class="max-h-52 object-contain floating-item drop-shadow-md" style="animation-delay: 0.9s;" />
+          </div>
+          <h4 class="font-display font-extrabold text-2xl text-fan-dark mb-1">Bocaditos MENTE</h4>
+          <p class="text-xs font-semibold text-fan-dark/60">Frutos Rojos & Rhodiola</p>
+        </div>
+
+        <!-- Bocadito ENERGÍA -->
+        <div class="bg-white/80 backdrop-blur border border-fan-yellow rounded-3xl p-6 text-center shadow-sm relative group hover:border-fan-red transition">
+          <span class="absolute top-4 right-4 bg-fan-yellow text-fan-dark text-[10px] font-black px-2.5 py-1 rounded-full uppercase">Próximo</span>
+          <div class="h-60 flex items-center justify-center mb-4">
+            <img src="energia bocadito sin fondo.png" alt="Bocadito FAN! Energía" class="max-h-52 object-contain floating-item drop-shadow-md" style="animation-delay: 1.5s;" />
+          </div>
+          <h4 class="font-display font-extrabold text-2xl text-fan-dark mb-1">Bocaditos ENERGÍA</h4>
+          <p class="text-xs font-semibold text-fan-dark/60">Peanut Caramel & Ginseng</p>
+        </div>
+
       </div>
     </div>
-    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-fan-green/20 text-center text-xs text-fan-cream/50">
-      <p>© 2026 Barritas FAN! — Prototipo de Presentación.</p>
+  </section>
+
+  <!-- Sección de Beneficios / Valores de Marca -->
+  <section id="beneficios" class="py-20 max-w-7xl mx-auto px-6">
+    <div class="bg-fan-orange/30 border border-fan-orange rounded-3xl p-10 md:p-16 text-center">
+      <h3 class="text-3xl md:text-4xl font-display font-black text-fan-dark mb-10 tracking-tight">
+        ¿Por qué elegir <span class="text-fan-red">FAN!</span>?
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="p-4">
+          <div class="w-12 h-12 bg-fan-green rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
+          <h5 class="font-display font-bold text-lg mb-2">100% Vegetal</h5>
+          <p class="text-sm text-fan-dark/70">Ingredientes de origen natural y respetuosos con el cuerpo.</p>
+        </div>
+        <div class="p-4">
+          <div class="w-12 h-12 bg-fan-yellow rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
+          <h5 class="font-display font-bold text-lg mb-2">Sin Gluten</h5>
+          <p class="text-sm text-fan-dark/70">Aptas para celíacos y personas que buscan una digestión liviana.</p>
+        </div>
+        <div class="p-4">
+          <div class="w-12 h-12 bg-fan-pink rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
+          <h5 class="font-display font-bold text-lg mb-2">Con Adaptógenos</h5>
+          <p class="text-sm text-fan-dark/70">Hongos y plantas funcionales que potencian tu rendimiento.</p>
+        </div>
+        <div class="p-4">
+          <div class="w-12 h-12 bg-fan-orange rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
+          <h5 class="font-display font-bold text-lg mb-2">Sin Azúcar Añadida</h5>
+          <p class="text-sm text-fan-dark/70">Endulzadas naturalmente sin picos glicémicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Comunidad Instagram -->
+  <section class="bg-fan-dark text-fan-cream py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-fan-green mb-3 block">Comunidad FAN!</span>
+      <h3 class="text-4xl font-display font-black mb-6">Sumate a nuestro Instagram</h3>
+      <p class="text-lg text-fan-cream/80 mb-8 max-w-xl mx-auto">
+        Conocé novedades, puntos de venta y lanzamientos antes que nadie.
+      </p>
+      <a href="https://www.instagram.com/fan.barritas?igsh=bnpsbmk5eWdhcXBh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-fan-red hover:bg-fan-red/90 text-white font-bold px-8 py-4 rounded-full transition shadow-lg text-lg">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Seguir a @fan.barritas
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-fan-dark border-t border-fan-green/20 text-fan-cream/80 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 justify-between items-center text-center md:text-left">
+      <div>
+        <h5 class="text-2xl font-display font-black tracking-tight text-fan-cream mb-1">FAN! Barritas</h5>
+        <p class="text-sm text-fan-cream/70">Prototipo para presentación de marca.</p>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://www.instagram.com/fan.barritas?igsh=bnpsbmk5eWdhcXBh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-fan-cream hover:text-fan-yellow transition font-semibold text-sm">
+          Instagram
+        </a>
+        <a href="mailto:somosfan@..." class="bg-fan-yellow hover:bg-fan-yellow/90 text-fan-dark px-5 py-2 rounded-full font-bold text-xs transition">
+          somosfan@...
+        </a>
+      </div>
     </div>
   </footer>
 
