@@ -61,7 +61,7 @@
         <button onclick="showScreen('home', '#variedades')" class="text-fan-dark hover:text-fan-red transition">Barritas</button>
         <button onclick="showScreen('home', '#proximamente')" class="text-fan-dark hover:text-fan-red transition">Próximamente</button>
         <button onclick="showScreen('home', '#beneficios')" class="text-fan-dark hover:text-fan-red transition">Beneficios</button>
-        <button onclick="showScreen('club')" class="bg-fan-red text-white px-3.5 py-1.5 rounded-full font-extrabold hover:bg-fan-dark transition shadow-sm">Club Fan!</button>
+        <button onclick="showScreen('club')" class="bg-fan-red text-white px-3.5 py-1.5 rounded-full font-extrabold hover:bg-fan-dark transition shadow-sm">Club Fanático ⭐️</button>
       </nav>
     </div>
   </header>
@@ -211,7 +211,7 @@
           <div class="p-4">
             <div class="w-12 h-12 bg-fan-orange rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
             <h5 class="font-display font-bold text-lg mb-2">Sin Azúcar Añadida</h5>
-            <p class="text-sm text-fan-dark/70">Endulzadas naturally sin picos glicémicos.</p>
+            <p class="text-sm text-fan-dark/70">Endulzadas naturalmente sin picos glicémicos.</p>
           </div>
         </div>
       </div>
@@ -266,11 +266,12 @@
               <li>✓ Envío sin cargo a tu domicilio</li>
               <li>✓ Descuento por unidad en suscripción</li>
               <li>✓ Elección de 12 o 24 unidades</li>
+              <li>🎁 <strong>¡Suma una sorpresa especial cada mes!</strong></li>
             </ul>
           </div>
           <div>
             <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
-            <button class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Foco</button>
+            <button onclick="scrollToOption1()" class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Foco</button>
           </div>
         </div>
 
@@ -287,11 +288,12 @@
               <li>✓ Envío sin cargo a tu domicilio</li>
               <li>✓ Descuento por unidad en suscripción</li>
               <li>✓ Elección de 12 o 24 unidades</li>
+              <li>🎁 <strong>¡Suma una sorpresa especial cada mes!</strong></li>
             </ul>
           </div>
           <div>
             <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
-            <button class="w-full bg-fan-red hover:bg-fan-dark text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Mente</button>
+            <button onclick="scrollToOption1()" class="w-full bg-fan-red hover:bg-fan-dark text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Mente</button>
           </div>
         </div>
 
@@ -308,19 +310,20 @@
               <li>✓ Envío sin cargo a tu domicilio</li>
               <li>✓ Descuento por unidad en suscripción</li>
               <li>✓ Elección de 12 o 24 unidades</li>
+              <li>🎁 <strong>¡Suma una sorpresa especial cada mes!</strong></li>
             </ul>
           </div>
           <div>
             <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
-            <button class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Energía</button>
+            <button onclick="scrollToOption1()" class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Energía</button>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECCIÓN REUTILIZADA: MODELO DE NEGOCIO Y OPCIONES DE SUSCRIPCIÓN -->
-    <section class="max-w-6xl mx-auto px-6 py-12">
+    <!-- MODELO DE NEGOCIO Y OPCIONES DE SUSCRIPCIÓN CON ANIMACIÓN DE SELECCIÓN -->
+    <section id="opciones-suscripcion" class="max-w-6xl mx-auto px-6 py-12 scroll-mt-28">
       <div class="bg-white border-2 border-fan-dark/10 rounded-3xl p-8 md:p-12 shadow-sm">
         
         <!-- Header Modelo -->
@@ -336,16 +339,17 @@
           </p>
         </div>
 
-        <!-- 2 Opciones de Configuración -->
+        <!-- 2 Opciones de Configuración con Animación Hover -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <!-- Opción 1 -->
-          <div class="bg-fan-cream p-6 rounded-2xl border border-fan-orange flex flex-col justify-between">
+          <!-- Opción 1 (Con efecto flotante al pasar el mouse e identificador para scroll) -->
+          <div id="opcion-1" class="bg-fan-cream p-6 rounded-2xl border-2 border-fan-red flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl cursor-pointer group relative">
+            <span class="absolute -top-3 right-6 bg-fan-red text-white text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">¡Incluye Regalo Sorpresa! 🎁</span>
             <div>
               <span class="text-xs font-black text-fan-red uppercase tracking-wider block mb-1">Opción 1</span>
-              <h4 class="font-display font-black text-xl text-fan-dark mb-2">Selección de Sabor Único</h4>
+              <h4 class="font-display font-black text-xl text-fan-dark mb-2 group-hover:text-fan-red transition-colors">Selección de Sabor Único</h4>
               <p class="text-xs text-fan-dark/70 leading-relaxed mb-4">
-                Elegí recibir tu caja personalizada al 100% de tu sabor favorito para no romper tu rutina.
+                Elegí recibir tu caja personalizada al 100% de tu sabor favorito (Foco, Mente o Energía) para no romper tu rutina. ¡Cada pedido viene con una sorpresa exclusiva en la caja!
               </p>
             </div>
             <div class="bg-white/80 p-3 rounded-xl border border-fan-dark/5 text-xs font-bold text-fan-dark flex justify-around">
@@ -354,13 +358,14 @@
             </div>
           </div>
 
-          <!-- Opción 2 -->
-          <div class="bg-fan-cream p-6 rounded-2xl border border-fan-orange flex flex-col justify-between">
+          <!-- Opción 2 (Con efecto flotante al pasar el mouse) -->
+          <div class="bg-fan-cream p-6 rounded-2xl border border-fan-orange flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl cursor-pointer group">
+            <span class="absolute -top-3 right-6 bg-fan-red text-white text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">¡Incluye Regalo Sorpresa! 🎁</span>
             <div>
               <span class="text-xs font-black text-fan-red uppercase tracking-wider block mb-1">Opción 2</span>
-              <h4 class="font-display font-black text-xl text-fan-dark mb-2">Pack Surtido FAN!</h4>
+              <h4 class="font-display font-black text-xl text-fan-dark mb-2 group-hover:text-fan-red transition-colors">Pack Surtido FAN!</h4>
               <p class="text-xs text-fan-dark/70 leading-relaxed mb-4">
-                Delegá la selección en una combinación pre-armada y equilibrada directamente de fábrica.
+                Delegá la selección en una combinación pre-armada y equilibrada directamente de fábrica. Incluye también sorpresas en tu unboxing.
               </p>
             </div>
             <div class="bg-white/80 p-3 rounded-xl border border-fan-dark/5 text-xs font-bold text-fan-dark flex justify-around">
@@ -414,7 +419,7 @@
     </div>
   </footer>
 
-  <!-- Script de Navegación entre Screens -->
+  <!-- Script de Navegación entre Screens y Scroll a Opción 1 -->
   <script>
     function showScreen(screenName, targetSection = null) {
       const homeScreen = document.getElementById('screen-home');
@@ -438,6 +443,13 @@
         } else {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+      }
+    }
+
+    function scrollToOption1() {
+      const target = document.getElementById('opciones-suscripcion');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     }
   </script>
