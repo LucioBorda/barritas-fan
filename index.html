@@ -46,15 +46,6 @@
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0px); }
     }
-
-    /* Animación de pulso misterioso para las sorpresas */
-    .mystery-glow {
-      animation: pulseGlow 3s infinite alternate;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 15px rgba(209, 96, 85, 0.2); }
-      100% { box-shadow: 0 0 30px rgba(209, 96, 85, 0.6); }
-    }
   </style>
 </head>
 <body class="bg-fan-cream font-sans text-fan-dark flex flex-col min-h-screen">
@@ -70,7 +61,7 @@
         <button onclick="showScreen('home', '#variedades')" class="text-fan-dark hover:text-fan-red transition">Barritas</button>
         <button onclick="showScreen('home', '#proximamente')" class="text-fan-dark hover:text-fan-red transition">Próximamente</button>
         <button onclick="showScreen('home', '#beneficios')" class="text-fan-dark hover:text-fan-red transition">Beneficios</button>
-        <button onclick="showScreen('club')" class="bg-fan-red text-white px-3 py-1 rounded-full font-extrabold hover:bg-fan-dark transition">Club Fanático ⭐️</button>
+        <button onclick="showScreen('club')" class="bg-fan-red text-white px-3.5 py-1.5 rounded-full font-extrabold hover:bg-fan-dark transition shadow-sm">Club Fan!</button>
       </nav>
     </div>
   </header>
@@ -165,7 +156,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
           <div class="bg-white/80 backdrop-blur border border-fan-pink rounded-3xl p-8 text-center shadow-sm relative group hover:border-fan-red transition">
             <span class="absolute top-4 right-4 bg-fan-pink text-fan-dark text-[10px] font-black px-3 py-1 rounded-full uppercase z-10">Próximo</span>
             <div class="h-80 sm:h-96 flex items-center justify-center mb-4 overflow-hidden">
@@ -192,7 +182,6 @@
             <h4 class="font-display font-extrabold text-2xl text-fan-dark mb-1">Bocaditos ENERGÍA</h4>
             <p class="text-xs font-semibold text-fan-dark/60">Peanut Caramel & Ginseng</p>
           </div>
-
         </div>
       </div>
     </section>
@@ -222,7 +211,7 @@
           <div class="p-4">
             <div class="w-12 h-12 bg-fan-orange rounded-full flex items-center justify-center text-fan-dark font-black mx-auto mb-4 text-xl">✓</div>
             <h5 class="font-display font-bold text-lg mb-2">Sin Azúcar Añadida</h5>
-            <p class="text-sm text-fan-dark/70">Endulzadas naturalmente sin picos glicémicos.</p>
+            <p class="text-sm text-fan-dark/70">Endulzadas naturally sin picos glicémicos.</p>
           </div>
         </div>
       </div>
@@ -234,7 +223,7 @@
         <span class="text-xs font-bold uppercase tracking-widest text-fan-red mb-3 block">Comunidad Exclusiva</span>
         <h3 class="text-4xl md:text-5xl font-display font-black mb-4">¿Querés tu dosis mensual asegurada?</h3>
         <p class="text-lg text-fan-dark/80 mb-8 max-w-xl mx-auto">
-          Unite al club de suscripción mensual y recibí tus barritas favoritas directo en tu casa con sorpresas especiales.
+          Unite al club de suscripción mensual y recibí tus barritas favoritas directo en tu casa con precio bonificado.
         </p>
         <button onclick="showScreen('club')" class="inline-flex items-center gap-3 bg-fan-red hover:bg-fan-red/90 text-white font-black px-10 py-5 rounded-full transition shadow-xl text-xl transform hover:-translate-y-1">
           ¡Quiero ser Fanático! 🔥
@@ -253,10 +242,10 @@
         Suscripción Mensual FAN!
       </span>
       <h2 class="text-4xl md:text-6xl font-display font-black text-fan-dark mb-4 tracking-tighter">
-        Elegí tu caja, recibí <span class="text-fan-red">energía y sorpresas</span>.
+        Elegí tu caja, recibí <span class="text-fan-red">energía y ahorro</span>.
       </h2>
       <p class="text-lg text-fan-dark/80 max-w-2xl mx-auto">
-        Suscribite mensualmente a tu variedad favorita. Cancelá o modificá cuando quieras, sin contratos ni letras chicas.
+        Suscribite mensualmente a tu variedad favorita o pedí un pack surtido. Modificá o cancelá cuando quieras.
       </p>
     </section>
 
@@ -272,15 +261,15 @@
               <img src="foco caja.png" alt="Caja FAN! FOCO" class="h-full w-full object-contain floating-item drop-shadow-xl" />
             </div>
             <h3 class="font-display font-black text-3xl text-fan-dark mb-2">Caja FOCO</h3>
-            <p class="text-sm font-semibold text-fan-dark/70 mb-4">12 Barritas Foco (Cacao & Melena de León)</p>
+            <p class="text-sm font-semibold text-fan-dark/70 mb-4">Focus & Claridad Mental (Cacao & Melena de León)</p>
             <ul class="text-sm space-y-2 mb-6 text-fan-dark/80">
-              <li>✓ Envío mensual automático</li>
-              <li>✓ 15% OFF vs precio individual</li>
-              <li>🎁 <strong>Regalo sorpresa exclusivo</strong></li>
+              <li>✓ Envío sin cargo a tu domicilio</li>
+              <li>✓ Descuento por unidad en suscripción</li>
+              <li>✓ Elección de 12 o 24 unidades</li>
             </ul>
           </div>
           <div>
-            <div class="text-2xl font-black text-fan-dark mb-4">$ Plan Mensual</div>
+            <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
             <button class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Foco</button>
           </div>
         </div>
@@ -293,15 +282,15 @@
               <img src="mente caja.png" alt="Caja FAN! MENTE" class="h-full w-full object-contain floating-item drop-shadow-xl" style="animation-delay: 0.5s;" />
             </div>
             <h3 class="font-display font-black text-3xl text-fan-dark mb-2">Caja MENTE</h3>
-            <p class="text-sm font-semibold text-fan-dark/70 mb-4">12 Barritas Mente (Frutos Rojos & Rhodiola)</p>
+            <p class="text-sm font-semibold text-fan-dark/70 mb-4">Calma & Equilibrio (Frutos Rojos & Rhodiola)</p>
             <ul class="text-sm space-y-2 mb-6 text-fan-dark/80">
-              <li>✓ Envío mensual automático</li>
-              <li>✓ 15% OFF vs precio individual</li>
-              <li>🎁 <strong>Regalo sorpresa exclusivo</strong></li>
+              <li>✓ Envío sin cargo a tu domicilio</li>
+              <li>✓ Descuento por unidad en suscripción</li>
+              <li>✓ Elección de 12 o 24 unidades</li>
             </ul>
           </div>
           <div>
-            <div class="text-2xl font-black text-fan-dark mb-4">$ Plan Mensual</div>
+            <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
             <button class="w-full bg-fan-red hover:bg-fan-dark text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Mente</button>
           </div>
         </div>
@@ -314,15 +303,15 @@
               <img src="energia caja.png" alt="Caja FAN! ENERGÍA" class="h-full w-full object-contain floating-item drop-shadow-xl" style="animation-delay: 1s;" />
             </div>
             <h3 class="font-display font-black text-3xl text-fan-dark mb-2">Caja ENERGÍA</h3>
-            <p class="text-sm font-semibold text-fan-dark/70 mb-4">12 Barritas Energía (Peanut Caramel)</p>
+            <p class="text-sm font-semibold text-fan-dark/70 mb-4">Vitalidad & Rendimiento (Peanut Caramel)</p>
             <ul class="text-sm space-y-2 mb-6 text-fan-dark/80">
-              <li>✓ Envío mensual automático</li>
-              <li>✓ 15% OFF vs precio individual</li>
-              <li>🎁 <strong>Regalo sorpresa exclusivo</strong></li>
+              <li>✓ Envío sin cargo a tu domicilio</li>
+              <li>✓ Descuento por unidad en suscripción</li>
+              <li>✓ Elección de 12 o 24 unidades</li>
             </ul>
           </div>
           <div>
-            <div class="text-2xl font-black text-fan-dark mb-4">$ Plan Mensual</div>
+            <div class="text-2xl font-black text-fan-dark mb-4">12 o 24 Unidades</div>
             <button class="w-full bg-fan-dark hover:bg-fan-red text-white font-bold py-3.5 rounded-2xl transition">Suscribirme a Energía</button>
           </div>
         </div>
@@ -330,42 +319,94 @@
       </div>
     </section>
 
-<!-- Sección MISTERIO / REGALOS ESCONDIDOS -->
-<section class="max-w-5xl mx-auto px-6 py-16">
-  <div class="bg-white border-2 border-dashed border-fan-red rounded-3xl p-8 md:p-12 text-center mystery-glow relative overflow-hidden">
-    <span class="bg-fan-red text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
-      Experiencia Unboxing
-    </span>
-    <h3 class="text-3xl md:text-4xl font-display font-black text-fan-dark mb-4">
-      ¿Qué viene escondido en tu caja? 🤫
-    </h3>
-    <p class="text-base text-fan-dark/70 max-w-xl mx-auto mb-8">
-      Ser parte del Club Fanático tiene premio. Cada mes escondemos dentro de la caja ítems de edición limitada para acompañar tu rutina.
-    </p>
+    <!-- SECCIÓN REUTILIZADA: MODELO DE NEGOCIO Y OPCIONES DE SUSCRIPCIÓN -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="bg-white border-2 border-fan-dark/10 rounded-3xl p-8 md:p-12 shadow-sm">
+        
+        <!-- Header Modelo -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="bg-fan-green/30 text-fan-dark text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">
+            Modelo de Recompra Digital
+          </span>
+          <h3 class="text-3xl md:text-4xl font-display font-black text-fan-dark mb-4">
+            Ahorro para el cliente, previsibilidad para FAN!
+          </h3>
+          <p class="text-sm md:text-base text-fan-dark/80 leading-relaxed">
+            Un snack de funcionalidad cognitiva y energética responde a un consumo recurrente en rutinas laborales y académicas. Este esquema asegura un hábito económico con envío sin cargo y proyecta la producción con nuestro co-packer.
+          </p>
+        </div>
 
-    <button onclick="showScreen('home')" class="mt-8 text-xs font-extrabold text-fan-dark underline hover:text-fan-red transition">
-      ← Volver a la tienda principal
-    </button>
-  </div>
-</section>
+        <!-- 2 Opciones de Configuración -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Opción 1 -->
+          <div class="bg-fan-cream p-6 rounded-2xl border border-fan-orange flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-black text-fan-red uppercase tracking-wider block mb-1">Opción 1</span>
+              <h4 class="font-display font-black text-xl text-fan-dark mb-2">Selección de Sabor Único</h4>
+              <p class="text-xs text-fan-dark/70 leading-relaxed mb-4">
+                Elegí recibir tu caja personalizada al 100% de tu sabor favorito para no romper tu rutina.
+              </p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-xl border border-fan-dark/5 text-xs font-bold text-fan-dark flex justify-around">
+              <span>📦 Caja de 12 U. (100% único)</span>
+              <span>📦 Caja de 24 U. (100% único)</span>
+            </div>
+          </div>
 
-  <!-- Footer -->
-  <footer id="contacto" class="bg-fan-orange border-t border-fan-dark/10 text-fan-dark py-12 px-6">
+          <!-- Opción 2 -->
+          <div class="bg-fan-cream p-6 rounded-2xl border border-fan-orange flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-black text-fan-red uppercase tracking-wider block mb-1">Opción 2</span>
+              <h4 class="font-display font-black text-xl text-fan-dark mb-2">Pack Surtido FAN!</h4>
+              <p class="text-xs text-fan-dark/70 leading-relaxed mb-4">
+                Delegá la selección en una combinación pre-armada y equilibrada directamente de fábrica.
+              </p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-xl border border-fan-dark/5 text-xs font-bold text-fan-dark flex justify-around">
+              <span>📦 12 U. (4 Foco / 4 Mente / 4 Energía)</span>
+              <span>📦 24 U. (8 Foco / 8 Mente / 8 Energía)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botón Volver -->
+        <div class="text-center mt-10">
+          <button onclick="showScreen('home')" class="text-xs font-extrabold text-fan-dark underline hover:text-fan-red transition">
+            ← Volver a la tienda principal
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (GLOBAL Y SIEMPRE VISIBLE) -->
+  <footer id="contacto" class="bg-fan-orange border-t border-fan-dark/10 text-fan-dark py-12 px-6 mt-auto">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 justify-between items-center text-center md:text-left">
       <div>
         <h5 class="text-2xl font-display font-black tracking-tight text-fan-dark mb-1">FAN! Barritas</h5>
         <p class="text-sm text-fan-dark/70 font-semibold">Potenciá tu día de forma natural</p>
       </div>
       <div class="flex items-center gap-6">
+        
+        <!-- Icono Instagram -->
         <a href="https://www.instagram.com/fan.barritas?igsh=bnpsbmk5eWdhcXBh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-fan-dark hover:text-fan-red transition" aria-label="Instagram">
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
+
+        <!-- Icono Facebook -->
         <a href="#" class="text-fan-dark hover:text-fan-red transition" aria-label="Facebook">
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
+
+        <!-- Icono TikTok -->
         <a href="#" class="text-fan-dark hover:text-fan-red transition" aria-label="TikTok">
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.55-1.28 2.53-.02.82.35 1.64.97 2.16.8.69 1.93.9 2.92.61.98-.26 1.82-1.01 2.19-1.97.23-.58.33-1.2.32-1.83.02-4.57.01-9.15.01-13.72z"/></svg>
         </a>
+
         <a href="mailto:somosfan@..." class="bg-fan-dark hover:bg-fan-red text-white px-5 py-2 rounded-full font-bold text-xs transition">
           somosfan@...
         </a>
@@ -373,7 +414,7 @@
     </div>
   </footer>
 
-  <!-- Script para la navegación entre screens sin recargar página -->
+  <!-- Script de Navegación entre Screens -->
   <script>
     function showScreen(screenName, targetSection = null) {
       const homeScreen = document.getElementById('screen-home');
